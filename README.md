@@ -1,6 +1,4 @@
 # GlobalGuess
-=======
-# GlobalGuess
 
 | Name           | Student ID |
 |----------------|------------|
