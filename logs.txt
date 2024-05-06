@@ -1,0 +1,50 @@
+commit 74587ed3de0c4e31ab20129816b70dc9a2b2b531
+Author: Andrew-Biggins1 <116644810+Andrew-Biggins1@users.noreply.github.com>
+Date:   Thu May 2 11:39:55 2024 +0800
+
+    Structure
+    
+    Created files with structure:
+    static: css/js
+    templates: html
+    requirement.txt
+    gitignore
+    files
+
+commit a1e273858e272d72597c8c38f8dcfd44c7e85d9b
+Author: Andrew-Biggins1 <116644810+Andrew-Biggins1@users.noreply.github.com>
+Date:   Thu May 2 11:27:04 2024 +0800
+
+    Update README.md
+    
+    New changes to readme
+
+commit 1a5c917280520d612c0be2ed2b5de217b4b528bb
+Author: Andrew-Biggins1 <116644810+Andrew-Biggins1@users.noreply.github.com>
+Date:   Thu May 2 11:24:34 2024 +0800
+
+    Update README.md
+    
+    New changes to readme
+
+commit 051269b2241b993753e843fbc8ad89a756e9c788
+Author: Andrew-Biggins1 <116644810+Andrew-Biggins1@users.noreply.github.com>
+Date:   Thu May 2 10:41:18 2024 +0800
+
+    Update README.md
+    
+    Updating name into table format
+
+commit 7a33287821c1f0e2e75ec718fa9ce00f49efd5b9
+Author: Andrew-Biggins1 <116644810+Andrew-Biggins1@users.noreply.github.com>
+Date:   Thu May 2 10:39:02 2024 +0800
+
+    Update README.md
+    
+    Test
+
+commit b334d19780e9df9dad04e21850e3495e88b73bf0
+Author: Andrew-Biggins1 <116644810+Andrew-Biggins1@users.noreply.github.com>
+Date:   Thu May 2 10:17:23 2024 +0800
+
+    Initial commit
