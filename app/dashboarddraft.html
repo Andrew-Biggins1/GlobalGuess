@@ -1,0 +1,229 @@
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebApp Dashboard</title>
+    <style>
+        body {
+            font-family: 'Arial Rounded MT Bold', sans-serif; 
+            text-align: center;
+            background-color: rgb(32, 32, 32);
+            margin: 0;
+        }
+        #title {
+            background-color: #444242;
+            color: rgb(51, 121, 10);
+            padding: 20px;
+            margin: 0;
+            text-align: center;
+        }
+        #task-bar {
+            background-color: #444242;
+            color: white;
+            padding: 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 25%;
+            height: 100%;
+            box-sizing: border-box;
+            display: none; 
+            text-align: left; 
+        }
+        #dashboard-content {
+            padding-top: 50px;
+            text-align: center;
+            color: white;
+            font-size: 18px;
+        }
+        #welcomeMessage {
+            font-size: 28px;
+        }
+        #hamburger {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            text-align: left;
+            font-size: 36px;
+            color: white;
+        }
+        .task-bar-item {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .task-bar-item h3 {
+            display: inline-block;
+            margin: 0;
+        }
+        .task-bar-item:after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+        }
+        .friend {
+            border: 1px solid #444242;
+            padding: 10px;
+            margin: 5px auto; 
+            width: 200px;
+            text-align: center;
+            font-weight: bold; 
+            font-size: 18px; 
+            color: white;
+        }
+        .game-buttons {
+            margin-top: 20px;
+        }
+    </style>
+    </head>
+    <body>
+
+    <div id="hamburger">&#9776;</div>
+
+    <div id="title">
+        <h1>Dashboard</h1>
+    </div>
+
+    <div id="task-bar">
+        <h2>Player Info</h2>
+        <div class="task-bar-item" onclick="displayPlayerStats()">
+            <h3>Player Stats</h3>
+        </div>
+        <div class="task-bar-item" onclick="displayPlayerFriends()">
+            <h3>Friends</h3>
+        </div>
+        <div class="task-bar-item" onclick="reloadPage()">
+            <h3>Play Game</h3>
+        </div>
+        <div class="task-bar-item" onclick="returnToHomepage()">
+            <h3>Log Out</h3>
+        </div>
+    </div>
+
+    <div id="dashboard-content">
+        <div class="container">
+            <h2 id="welcomeMessage"></h2>
+            <p>Do you want to play a Game?</p>
+            <div class="game-buttons">
+                <button onclick="startPrivateGame()">Private Game</button>
+                <button onclick="startPublicGame()">Public Game</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        function toggleTaskBar() {
+            const taskBar = document.getElementById('task-bar');
+            taskBar.style.display = (taskBar.style.display === 'block') ? 'none' : 'block';
+        }
+
+        function resetDashboardContent() {
+            const dashboardContent = document.getElementById('dashboard-content');
+            dashboardContent.innerHTML = `
+                <div class="container">
+                    <h2 id="welcomeMessage"></h2>
+                    <p>Do you want to play a Game?</p>
+                    <div class="game-buttons">
+                        <button onclick="startPrivateGame()">Private Game</button>
+                        <button onclick="startPublicGame()">Public Game</button>
+                    </div>
+                </div>
+            `;
+            
+            updateWelcomeMessage();
+        }
+
+        
+        function reloadPage() {
+            resetDashboardContent();
+        }
+
+        
+        function updateWelcomeMessage() {
+            
+            const urlParams = new URLSearchParams(window.location.search);
+            const username = urlParams.get('username');
+            
+            
+            document.getElementById('welcomeMessage').textContent = `Welcome, ${username}!`;
+        }
+
+        
+        function displayPlayerStats() {
+            const dashboardContent = document.getElementById('dashboard-content');
+            dashboardContent.innerHTML = `
+                <div id="player-stats-content">
+                    <h2>Player Stats</h2>
+                    <p>Score: 1000</p>
+                    <p>Accuracy: 80%</p>
+                    <p>Matches Played: 50</p>
+                </div>
+            `;
+        }
+
+        
+        function displayPlayerFriends() {
+            const dashboardContent = document.getElementById('dashboard-content');
+            dashboardContent.innerHTML = `
+                <div id="player-friends-content">
+                    <h2>Your Friends:</h2>
+                    <div class="friend">
+                        Friend 1
+                        <p>Score: 1200</p>
+                        <p>Accuracy: 85%</p>
+                        <p>Matches Played: 60</p>
+                    </div>
+                    <div class="friend">
+                        Friend 2
+                        <p>Score: 1100</p>
+                        <p>Accuracy: 82%</p>
+                        <p>Matches Played: 55</p>
+                    </div>
+                    <div class="friend">
+                        Friend 3
+                        <p>Score: 1050</p>
+                        <p>Accuracy: 80%</p>
+                        <p>Matches Played: 52</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        
+        function startPrivateGame() {
+            // Add functionality for private game here
+        }
+
+        
+        function startPublicGame() {
+            // Add functionality for public game here
+        }
+
+        
+        function returnToHomepage() {
+            window.location.href = "homepage.html";
+        }
+
+        document.getElementById('hamburger').addEventListener('click', toggleTaskBar);
+
+        document.addEventListener('DOMContentLoaded', function() {
+            updateWelcomeMessage();
+        });
+
+        document.addEventListener('click', function(event) {
+            const taskBar = document.getElementById('task-bar');
+            const hamburger = document.getElementById('hamburger');
+            if (event.target !== taskBar && event.target !== hamburger) {
+                taskBar.style.display = 'none';
+            }
+        });
+    </script>
+
+    </body>
+</html>
