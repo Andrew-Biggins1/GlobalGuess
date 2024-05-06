@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WebApp</title>
+        <style>
+            body {
+                font-family: 'Arial Rounded MT Bold', sans-serif; /* Bubble-like font */
+                text-align: center;
+                background-color: rgb(32, 32, 32);
+                margin: 0;
+            }
+            #title {
+                background-color: #444242;
+                color: rgb(51, 121, 10);
+                padding: 20px;
+                margin: 0;
+            }
+            .container {
+                margin-top: 50px;
+            }
+            button {
+                padding: 10px 20px;
+                font-size: 16px;
+                margin: 10px;
+            }
+            #signin-container {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+            }
+            #signup-container {
+                position: absolute;
+                top: 10px;
+                right: 100px;
+            }
+            #signin-form, #signup-form {
+                display: none;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 20px;
+                background-color: #333;
+                color: white;
+                border-radius: 10px;
+            }
+            h2 {
+                font-family: 'Arial Rounded MT Bold', sans-serif; /* Bubble-like font */
+                text-align: center;
+                color: white;
+                margin: 0;
+            }
+        </style>
+    </head>
+    <body>
+
+    <div id="title">
+        <h1>WebApp</h1>
+    </div>
+
+    <div class="container">
+        <h2>Welcome to WebApp</h2>
+        <button onclick="location.href='playgame.html'">Play Game</button><br>
+    </div>
+
+    <div id="signin-container">
+        <button onclick="showSignInForm()">Sign In</button>
+    </div>
+
+    <div id="signup-container">
+        <button onclick="showSignUpForm()">Sign Up</button>
+    </div>
+
+    <div id="signin-form">
+        <h2>Sign In</h2>
+        <form id="signInForm">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username"><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password"><br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div id="signup-form">
+        <h2>Sign Up</h2>
+        <form id="signupForm">
+            <label for="signupPlayerName">Player Name:</label><br>
+            <input type="text" id="signupPlayerName" name="signupPlayerName"><br>
+            <label for="signupUsername">Username:</label><br>
+            <input type="text" id="signupUsername" name="signupUsername"><br>
+            <label for="signupPassword">Password:</label><br>
+            <input type="password" id="signupPassword" name="signupPassword"><br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function showSignInForm() {
+            document.getElementById("signin-form").style.display = "block";
+            document.getElementById("signup-form").style.display = "none";
+        }
+
+        function showSignUpForm() {
+            document.getElementById("signup-form").style.display = "block";
+            document.getElementById("signin-form").style.display = "none";
+        }
+    </script>
+
+    </body>
+</html>
