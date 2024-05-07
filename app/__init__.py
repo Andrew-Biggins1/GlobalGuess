@@ -1,9 +1,11 @@
 from flask import Flask, render_template
 
 # Create the Flask application instance
-app = Flask(__name__)
+flaskApp = Flask(__name__)
 
 # Define the homepage route and view
-@app.route('/')
+@flaskApp.route('/')
 def homepage():
     return render_template('home.html')
+
+from app import routes

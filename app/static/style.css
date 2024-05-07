@@ -1,48 +1,5 @@
 *{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: gill sans ;
+
 }
 
-
-
-.wallpaper {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-color: #333; /* Dark grey background */
-    overflow: hidden; /* Hide overflow of child shapes */
-}
-
-.shape1, .shape2 {
-    position: absolute;
-    background-color: #666; /* Grey color for shapes */
-}
-
-.shape1 {
-    width: 200px; /* Adjust size of shape 1 */
-    height: 200px; /* Adjust size of shape 1 */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%; /* Circle shape */
-}
-
-.shape2 {
-    width: 150px; /* Adjust size of shape 2 */
-    height: 150px; /* Adjust size of shape 2 */
-    top: 20%;
-    left: 20%;
-    border-radius: 10px; /* Rounded rectangle shape */
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .shape1 {
-        width: 150px; /* Adjust size of shape 1 for smaller screens */
-        height: 150px; /* Adjust size of shape 1 for smaller screens */
-    }
-
-    .shape2 {
-        width: 100px; /* Adjust size of shape 2 for smaller screens */
-        height: 100px; /* Adjust size of shape 2 for smaller screens */
-    }
-}

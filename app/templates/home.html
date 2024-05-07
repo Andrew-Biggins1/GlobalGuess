@@ -5,16 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>GlobalGuess</title>
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
     <link href="/app/static/style.css" type="text/css" rel="stylesheet">
     
 </head>
 <body>
-    <h1>Hello</h1>
 
-    <div class="wallpaper">
-        <div class="shape1"></div>
-        <div class="shape2"></div>
-    </div>
+    <h1>GlobalGuess</h1>
+
+
+    <button class="btn btn-primary" onclick="location.href='{{ url_for('about') }}'">
+            Go to About
+    </button>
+
+    <button class="btn btn-primary" onclick="location.href='{{ url_for('login') }}'">
+            Go to Login
+    </button>
+
+    <button class="btn btn-primary" onclick="location.href='{{ url_for('signup') }}'">
+            Go to Signup
+    </button>
+
+    <button class="btn btn-primary" onclick="location.href='{{ url_for('profile') }}'">
+            Go to Profile
+    </button>
     
 </body>
 </html>
