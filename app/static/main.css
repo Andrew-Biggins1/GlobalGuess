@@ -3,31 +3,43 @@
 
 }
 
+body {
+    background-color: #e0f2f1; /* or any pastel color code */
+}
+
+
+
 .welcome {
     width: 50%; 
     margin: 0 auto; 
     text-align: center; 
 }
 
-
+.welcome h3 {
+    padding-top: 30px;
+}
 
 .welcome h1 {
     margin: 1px 0; 
     font-size: 60px;
 }
 
-.welcome h2 {
-    margin: 1px 0; 
-}
-
 .login-signup-button {
+    cursor: pointer;
     height: 22px;
     width: 160px;
     justify-content: center;
     align-items: center;
     display: flex;
     text-align: center;
+    box-shadow:  0 0 10px rgb(41, 94, 116);
+    transition: 0.4;
+    background-color: white;
+    border: 1.5px solid rgb(41, 94, 116);
+
+
   }
+
 
 .button-container {
     display: flex;
