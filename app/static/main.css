@@ -1,12 +1,12 @@
 *{
     font-family: gill sans ;
-
 }
+
 
 body {
-    background-color: #e0f2f1; /* or any pastel color code */
+    background-color: #e0f2f1; 
+    
 }
-
 
 
 .welcome {
@@ -19,10 +19,21 @@ body {
     padding-top: 30px;
 }
 
+.square {
+    width: 300px; 
+    height: 100px; 
+    background-color: #bfdcdc; 
+    position: absolute; 
+    bottom: 200px; 
+    left: 100px; 
+}
 .welcome h1 {
     margin: 1px 0; 
     font-size: 60px;
 }
+
+
+
 
 .login-signup-button {
     cursor: pointer;
@@ -36,10 +47,31 @@ body {
     transition: 0.4;
     background-color: white;
     border: 1.5px solid rgb(41, 94, 116);
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 5px;
 
 
   }
 
+
+.login-signup-button:hover{
+    background-color: aqua;
+    
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0);
+}
+  
 
 .button-container {
     display: flex;
