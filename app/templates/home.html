@@ -5,30 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>GlobalGuess</title>
-    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
-    <link href="/app/static/style.css" type="text/css" rel="stylesheet">
+    <link rel="icon" href="/static/images/favicon.ico">
+    <link rel="stylesheet" href="/app/static/main.css" >
     
 </head>
 <body>
 
-    <h1>GlobalGuess</h1>
+    <div class="welcome">
+        <h1>GlobalGuess &#127758</h1>
+        <h2>Can you guess where you are!</h2>
+    </div>
 
 
-    <button class="btn btn-primary" onclick="location.href='{{ url_for('about') }}'">
-            Go to About
-    </button>
 
-    <button class="btn btn-primary" onclick="location.href='{{ url_for('login') }}'">
-            Go to Login
-    </button>
+    <div class="button-container">
+        <button class="login-signup-button" id="login-button" onclick="location.href='{{ url_for('login') }}'">
+                <p>Login</p>
+        </button>
 
-    <button class="btn btn-primary" onclick="location.href='{{ url_for('signup') }}'">
-            Go to Signup
-    </button>
+        <button class="login-signup-button" id="signup-button" onclick="location.href='{{ url_for('signup') }}'">
+                <p>Signup</p>
+        </button>
+    </div>
 
-    <button class="btn btn-primary" onclick="location.href='{{ url_for('profile') }}'">
-            Go to Profile
-    </button>
+
+    <h1> <h1>
+
     
 </body>
 </html>

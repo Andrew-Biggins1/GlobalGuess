@@ -1,0 +1,37 @@
+*{
+    font-family: gill sans ;
+
+}
+
+.welcome {
+    width: 50%; 
+    margin: 0 auto; 
+    text-align: center; 
+}
+
+
+
+.welcome h1 {
+    margin: 1px 0; 
+    font-size: 60px;
+}
+
+.welcome h2 {
+    margin: 1px 0; 
+}
+
+.login-signup-button {
+    height: 22px;
+    width: 160px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+  }
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
