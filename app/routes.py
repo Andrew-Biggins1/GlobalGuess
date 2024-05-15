@@ -1,5 +1,6 @@
 from flask import redirect, render_template, request, url_for
-from app import flaskApp
+from app import flaskApp,db
+from app.models import User
 
 
 
@@ -18,3 +19,19 @@ def signup():
 @flaskApp.route("/profile")
 def profile():
     return render_template("profile.html")
+
+@flaskApp.route("/play")
+def play():
+    return render_template("play.html")
+
+@flaskApp.route('/register', methods=['GET', 'POST'])
+def registerComplete():
+    if request.method == 'POST':
+        email = request.form['email']
+        username = request.form['username']
+        password = request.form['password']
+        new_user = User(email=email, username=username, password=password)
+        db.session.add(new_user)
+        db.session.commit()
+        return redirect(url_for('login'))
+    return render_template('register.html')
