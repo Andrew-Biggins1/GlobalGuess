@@ -12,21 +12,24 @@
     <div id="hamburger">&#9776;</div>
 
     <div class="welcome">
-        <h1 id="header">GlobalGuess &#127758</h1>
+        <h1 id="header">GlobalGuess &#127758;</h1>
     </div>
-    
+
     <div id="task-bar">
-        <div class="task-bar-item" onmouseover="this.style.backgroundColor='#bfdcdc'; this.style.color='white';" onmouseout="this.style.backgroundColor=''; this.style.color='black';" onclick="displayPlayerStats()">
-            <h3>Player Stats</h3>
+        <div class="task-bar-item" onmouseover="this.style.backgroundColor='#bfdcdc'; this.style.color='white';" onmouseout="this.style.backgroundColor=''; this.style.color='black';" onclick="showFileInput()">
+            <h3>Submit an Image</h3>
         </div>
-        <div class="task-bar-item" onmouseover="this.style.backgroundColor='#bfdcdc'; this.style.color='white';" onmouseout="this.style.backgroundColor=''; this.style.color='black';" onclick="displayPlayerFriends()">
-            <h3>Friends</h3>
+        <div class="task-bar-item" onmouseover="this.style.backgroundColor='#bfdcdc'; this.style.color='white';" onmouseout="this.style.backgroundColor=''; this.style.color='black';" onclick="displayPlayerStats()">
+            <h3>Stats</h3>
+        </div>
+        <div class="task-bar-item" onmouseover="this.style.backgroundColor='#bfdcdc'; this.style.color='white';" onmouseout="this.style.backgroundColor=''; this.style.color='black';" onclick="displayLeaderboard()">
+            <h3>Leaderboard</h3>
         </div>
         <div class="task-bar-item" onmouseover="this.style.backgroundColor='#bfdcdc'; this.style.color='white';" onmouseout="this.style.backgroundColor=''; this.style.color='black';" onclick="returnToHomepage()">
             <h3>Log Out</h3>
         </div>
     </div>
-    
+
     <div id="dashboard-content">
         <div class="container">
             <h2 id="welcomeMessage"></h2>
@@ -35,6 +38,11 @@
                 <button onclick="startGame()">Play Game</button>
             </div>
         </div>
+    </div>
+
+    <div id="file-input-container">
+        <input type="file" id="imageInput" accept="image/*">
+        <button onclick="submitImages()">Submit</button>
     </div>
 </body>
 </html>
