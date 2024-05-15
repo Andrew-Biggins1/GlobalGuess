@@ -14,7 +14,19 @@ body {
     position: absolute; 
     bottom: 200px; 
     left: 100px; 
+    z-index: -1;
 }
+
+.square2 {
+    width: 150px; 
+    height: 300px; 
+    background-color: #bfdcdc; 
+    position: absolute; 
+    bottom: 100px; 
+    left: 500px; 
+    z-index: -1;
+}
+
 
 #homeText{
     text-align: center;
