@@ -189,4 +189,21 @@ body {
     color: white;
 }
 
+#file-input-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2196F3;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#file-input-container input[type="file"] {
+    margin: 10px 0;
+    display: block;
+}
+
 
