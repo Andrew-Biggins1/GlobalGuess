@@ -17,6 +17,30 @@ body {
     z-index: -1;
 }
 
+.about-button {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-end;
+    position: fixed; 
+    bottom: 10px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+
+}
+
+.about-button button {
+    cursor: pointer;
+    height: 30px;
+    width: 300px;
+    box-shadow: 0 0 10px rgb(41, 94, 116);
+    background-color: white;
+    border: 1.5px solid rgb(41, 94, 116);
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+
 .square2 {
     width: 150px; 
     height: 300px; 
@@ -54,8 +78,8 @@ body {
 
 .login-signup-button {
     cursor: pointer;
-    height: 22px;
-    width: 160px;
+    height: 30px;
+    width: 200px;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -95,6 +119,11 @@ body {
 .login button:hover{
     background-color: #bfdcdc;
 }
+
+.about-button button:hover{
+    background-color: #bfdcdc;
+}
+
 
 
 .username-group{
@@ -205,5 +234,4 @@ body {
     margin: 10px 0;
     display: block;
 }
-
 
