@@ -1,4 +1,4 @@
-from app.models import User
+from models import User
 
 test1 = User("user1@gmail.com", "user1", "password1")
 test2 = User("user2@gmail.com", "user2", "password2")
@@ -11,5 +11,7 @@ test8 = User("user8@gmail.com", "user8", "password8")
 test9 = User("user9@gmail.com", "user9", "password9")
 
 userList = (test1, test2, test3, test4, test5, test6, test7, test8, test9)
+
+print(userList)
 
 #Populate database with userList to check database is working
