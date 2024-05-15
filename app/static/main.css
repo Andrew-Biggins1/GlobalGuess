@@ -244,3 +244,48 @@ body {
     display: block;
 }
 
+.play-image-container{
+    text-align: center;
+    margin: 0;
+    border: 2px black;
+    border-radius: 2px 2px 2px 2px;
+}
+
+.locationImage{
+    width:400px; 
+    height:300px; 
+    border: 4px solid black; 
+    border-radius: 2px;
+}
+
+.inputFile{
+    width: 15px;
+    height: 15px;
+    color: beige;
+    
+}
+
+.navbar{
+    background-color: black;
+    overflow: hidden;
+    width: 100%;
+    padding: 20px 0;
+}
+.navbar button{
+    background-color: #e0f2f1;
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar p{
+    display: block;
+    color: white;
+    font-size: 16px;
+}
