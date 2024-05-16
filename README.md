@@ -15,7 +15,7 @@ A game where a user is able to upload a picture of a place, and the other users 
 Frontend:
 - html: Creating templates for pages
 - css: Creating styling for templates
-- Javascript: Creating interactive interactions client side
+- Javascript: Creating interactive elements client side
 
 Backend (Flask app in python):
 - SQLalchemy: To interact with SQlite database
