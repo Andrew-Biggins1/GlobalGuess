@@ -292,16 +292,19 @@ body {
     padding: 20px 0;
 }
 .navbar button{
-    background-color: #e0f2f1;
-    float: left;
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    font-size: 16px;
-    border: none;
     cursor: pointer;
+    height: 30px;
+    width: 80px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    box-shadow:  0 0 10px rgb(41, 94, 116);
+    background-color: white;
+    border: 1.5px solid rgb(41, 94, 116);
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 5px;
 }
 
 .navbar p{
@@ -396,4 +399,17 @@ body {
     left: 85%;
     transform: translateX(-50%);
     border-radius: 90px 10px 5px 42px ;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center;
+}
+
+#guessInput {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px; /* Adjust the margin between input and button */
 }

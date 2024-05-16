@@ -13,19 +13,28 @@
 
 <body onload="loadPlay()">
 <div id="userDisplay" class = "navbar">
-    <p id="userNameDisplay" style="color: #e0f2f1;" ></p>
-    <button onclick="location.href='{{ url_for('homepage') }}'">Home</button>
+    <p id="userNameDisplay" style="color: #e0f2f1; padding-left: 10px;" ></p>
+    <button onclick="location.href='{{ url_for('homepage') }}'" class="login-signup-button">Home</button>
 </div>
 <h1 id="header">PLAY</h1>
 <p id="imageNameDisplay" style="margin: 0px; text-align: center;"></p>
 <div style="text-align: center; margin: 0;" id="imageDiv">
 </div>
 
-<div style="text-align: center; margin: 0;">
-    <input type="text" id="guessInput" placeholder="Enter your guess" style="margin: 0;">
-    <button onclick="checkGuess()">Submit Guess</button>
-    <button onclick="reloadPage()">Next Image</button>
+<!--
+<div style="display: flex; flex-direction: row; align-items: center;">
+    <input type="text" class="input-guess" id="guessInput" placeholder="Enter your guess" style="margin: 0;">
+    <button onclick="checkGuess()" class="login-signup-button" style="margin-top: 5px; flex-direction: column; width: 30px; margin-top:5px">✔</button>
 </div>
+-->
+<div class="container">
+    <input type="text" id="guessInput" style = "width:160px"placeholder="Enter your guess">
+    <button onclick="checkGuess()" class="login-signup-button" style="width:30px">✔</button>
+</div>
+<div class="container" style="padding-top: 10px;">
+    <button onclick="reloadPage()" class="login-signup-button">Next Image</button>
+</div>
+
 <div id="hiddenData" style="visibility: hidden;"></div>
 
 
@@ -40,10 +49,12 @@
 
 
 <script>
-    function loadPlay(){
+function loadPlay(){
     var userDisplay = document.getElementById("userNameDisplay");
     updateImageView();
-    userDisplay.textContent = currentUser.username;
+    //userDisplay.textContent = localStorage.getItem('username');
+    userDisplay.textContent = "John";
+    
 
     userNumber = getRandomUser();
     populateDivs(userNumber);

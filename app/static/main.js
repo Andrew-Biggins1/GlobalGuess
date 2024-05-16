@@ -1,10 +1,13 @@
 var currentUsername;
+var currentScore;
+
 
 
 //Ajax request to grab username to be displayed
 $(document).ready(function() {
     $.get('/get_username', function(data) {
         $('#username').text(data.username);
+        localStorage.setItem('username', data.username);
     });
 });
 
@@ -110,7 +113,7 @@ function showFileInput() {
 function loadPlay(){
     var userDisplay = document.getElementById("userNameDisplay");
     updateImageView();
-    userDisplay.textContent = currentUser.username;
+    userDisplay.textContent = localStorage.getItem('username');
 
     userNumber = getRandomUser();
     populateDivs(userNumber);
