@@ -12,7 +12,12 @@ class User(db.Model):
     
 #Model for guess made (Used to display in profile)
 class Guess(db.Model):
+    guessID = db.Column(db.String(), primary_key = True)
+    User = db.Column(db.String(), db.ForeignKey('User.username'))
     Guess = db.Column(db.Boolean, nullable = False)
     correctGuess = db.Column(db.Boolean, nullable = False)
     isCorrect = db.Column(db.Boolean, nullable = False)
+
+    def __repr__(self):
+        return f'<Was your guess correct? {self.Guess == self.correctGuess}>'
     
