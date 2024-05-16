@@ -24,6 +24,8 @@ def profile():
 def play():
     return render_template("play.html")
 
+
+
 @flaskApp.route('/register', methods=['GET', 'POST'])
 def registerComplete():
     if request.method == 'POST':
