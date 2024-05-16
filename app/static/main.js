@@ -1,3 +1,14 @@
+var currentUsername;
+
+
+//Ajax request to grab username to be displayed
+$(document).ready(function() {
+    $.get('/get_username', function(data) {
+        $('#username').text(data.username);
+    });
+});
+
+
 function toggleTaskBar() {
             const taskBar = document.getElementById('task-bar');
             taskBar.style.display = (taskBar.style.display === 'block') ? 'none' : 'block';
