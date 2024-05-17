@@ -24,6 +24,7 @@ def profile():
 def play():
     return render_template("play.html")
 
+@flaskApp.route("/registered")
 
 
 @flaskApp.route('/register', methods=['GET', 'POST'])
