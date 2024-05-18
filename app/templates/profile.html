@@ -31,12 +31,17 @@
         </div>
     </div>
 
+
+    <div class="square"></div>  
+    <div class="square2"></div>
+    <div class="square3"></div>
+    <div class="square4"></div>
+
     <div id="dashboard-content">
-        <div class="container">
-            <h2 id="welcomeMessage">Welcome <span id="username">*insertUserNameWithJS*</span></h2>
-            <p>Do you want to play a Game?</p>
+        <div>
+            <h2 id="welcomeMessage">Welcome<span>{username}</span></h2>
             <div class="game-buttons">
-                <button onclick="startGame()">Play Game</button>
+                <button onclick="location.href='{{ url_for('about') }}'">Start Game</button>
             </div>
         </div>
     </div>
