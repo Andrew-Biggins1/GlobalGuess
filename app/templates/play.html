@@ -28,7 +28,7 @@
 </div>
 -->
 <div class="container">
-    <input type="text" id="guessInput" style = "width:160px"placeholder="Enter your guess">
+    <input type="text" id="guessInput" style = "width:160px" placeholder="Enter your guess">
     <button onclick="checkGuess()" class="login-signup-button" style="width:30px">✔</button>
 </div>
 <div class="container" style="padding-top: 10px;">
@@ -52,8 +52,8 @@
 function loadPlay(){
     var userDisplay = document.getElementById("userNameDisplay");
     updateImageView();
-    //userDisplay.textContent = localStorage.getItem('username');
-    userDisplay.textContent = "John";
+    userDisplay.textContent = localStorage.getItem('currentUsername');
+    //userDisplay.textContent = "John";
     
 
     userNumber = getRandomUser();
