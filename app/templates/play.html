@@ -13,20 +13,13 @@
 
 <body onload="loadPlay()">
 <div id="userDisplay" class = "navbar">
-    <p id="userNameDisplay" style="color: #e0f2f1; padding-left: 10px;" ></p>
-    <button onclick="location.href='{{ url_for('homepage') }}'" class="login-signup-button">Home</button>
+    <p id="userNameDisplay" style="color: #e0f2f1; padding-left: 25px;" ></p>
+    <button onclick="location.href='{{ url_for('homepage') }}'" class="login-signup-button" style="width:75px; text-align: left;">Home</button>
 </div>
 <h1 id="header">PLAY</h1>
 <p id="imageNameDisplay" style="margin: 0px; text-align: center;"></p>
-<div style="text-align: center; margin: 0;" id="imageDiv">
-</div>
+<div style="text-align: center; margin: 0;" id="imageDiv"></div>
 
-<!--
-<div style="display: flex; flex-direction: row; align-items: center;">
-    <input type="text" class="input-guess" id="guessInput" placeholder="Enter your guess" style="margin: 0;">
-    <button onclick="checkGuess()" class="login-signup-button" style="margin-top: 5px; flex-direction: column; width: 30px; margin-top:5px">✔</button>
-</div>
--->
 <div class="container">
     <input type="text" id="guessInput" style = "width:160px" placeholder="Enter your guess">
     <button onclick="checkGuess()" class="login-signup-button" style="width:30px">✔</button>
@@ -34,26 +27,23 @@
 <div class="container" style="padding-top: 10px;">
     <button onclick="reloadPage()" class="login-signup-button">Next Image</button>
 </div>
-
+<p id="points" style="font-size: 30px; text-align: center;"></p>
 <div id="hiddenData" style="visibility: hidden;"></div>
-
-
-
 
 <!-- Upload images from the user -->
 <div style="margin: 0; text-align: center;">
-<input type="file" class="inputFile" title=" ">
-<input type="text" placeholder="Location">
-<button>Upload Image</button>
+<input type="file" class="inputFile" title=" " style="text-align: center; margin: 0;">
+<input type="text" placeholder="Location" style="padding-right: 10px;">
+<button style="padding-left: 10px;">Upload Image</button>
 </div>
 
-
 <script>
+var pointsDisplay = document.getElementById("points");
 function loadPlay(){
     var userDisplay = document.getElementById("userNameDisplay");
+    pointsDisplay.textContent = localStorage.getItem('points');
     updateImageView();
-    userDisplay.textContent = localStorage.getItem('currentUsername');
-    //userDisplay.textContent = "John";
+    userDisplay.textContent = localStorage.getItem('username');
     
 
     userNumber = getRandomUser();
@@ -111,9 +101,13 @@ function checkGuess() {
     var userInput = document.getElementById('guessInput').value;
     var hiddenLocation = document.getElementById("location").textContent; // This is the hidden data embedded in the image
     var resultElement = document.getElementById('result');
+    var pointsDisplay = document.getElementById('points');
 
     if (userInput === hiddenLocation) {
     resultElement.textContent = "Congratulations! You guessed the correct location.";
+    var newPoint = parseInt(pointsDisplay.textContent) + 1;
+    localStorage.setItem('points',newPoint);
+    pointsDisplay.textContent=newPoint;
     } else {
     resultElement.textContent = "Sorry, that's not correct. Please try again.";
     }

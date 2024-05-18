@@ -279,33 +279,21 @@ body {
 }
 
 .inputFile{
-    width: 15px;
-    height: 15px;
+    width: 70px;
     color: beige;
-    
+    text-align: center;
+    padding: 0;
 }
 
 .navbar{
-    background-color: black;
+    background-color: #2196F3;
     overflow: hidden;
     width: 100%;
-    padding: 20px 0;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-right: 25px;
 }
-.navbar button{
-    cursor: pointer;
-    height: 30px;
-    width: 80px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    text-align: center;
-    box-shadow:  0 0 10px rgb(41, 94, 116);
-    background-color: white;
-    border: 1.5px solid rgb(41, 94, 116);
-    font-weight: bold;
-    font-size: 12px;
-    border-radius: 5px;
-}
+
 
 .navbar p{
     display: block;

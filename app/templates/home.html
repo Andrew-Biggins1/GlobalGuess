@@ -8,11 +8,14 @@
     <link rel="icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
     <link rel="stylesheet" href="/app/static/main.css" >
-
-
-    
+    <script>
+        function clearPoints(){
+            localStorage.setItem('points', 0);
+        }
+    </script>
 </head>
-<body>
+
+<body onload="clearPoints">
 
     <div class="welcome">
         <h1 id="header">GlobalGuess &#127758;</h1>
