@@ -2,7 +2,7 @@
 
 ## PLEASE NOTE
 To load css, /static/main.css didn't want to work at all but /app/static/main.css didn't work in flask
-so  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}"> was used but wont pass html validation. 
+so  ```<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">``` was used but wont pass html validation. 
 Please insert into html documents or css will not load, another copy of this has been made called GlobalGuess1 which has the full code but wont pass validation.
 
 
