@@ -1,5 +1,11 @@
 # GlobalGuess
 
+## PLEASE NOTE
+To load css, /static/main.css didn't want to work at all but /app/static/main.css didn't work in flask
+so  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}"> was used but wont pass html validation. 
+Please insert into html documents or css will not load, another copy of this has been made called GlobalGuess1 which has the full code but wont pass validation.
+
+
 ## Description:
 A game where a user is able to upload a picture of a place, and the other users can guess where the image was taken. Users will be able to sign up and create an account, or login with an existing account.
 
