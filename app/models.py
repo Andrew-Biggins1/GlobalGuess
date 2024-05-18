@@ -22,7 +22,6 @@ class Guess(db.Model):
     def __repr__(self):
         return f'<Was your guess correct? {self.Guess == self.correctGuess}>'
     
-    
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
 

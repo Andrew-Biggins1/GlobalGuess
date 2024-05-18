@@ -1,8 +1,8 @@
 from flask import redirect, render_template, request, url_for, flash, jsonify, session
 from app import flaskApp,db
 from app.models import User
-
-
+from app.forms import registerForm
+from werkzeug.security import generate_password_hash, check_password_hash
 
 @flaskApp.route('/about')
 def about():
@@ -27,9 +27,15 @@ def play():
 
 @flaskApp.route('/register', methods=['post'])
 def registerComplete():
-    email = request.form['email']
-    username = request.form['username']
-    password = request.form['password']
+    form = registerForm()
+    if not form.validate_on_submit():
+        return render_template('signup.html', form=form)
+    
+
+
+    email = form.email
+    username = form.username
+    password = form.password
     #print(f'Email: {email}')
     #print(f'Username: {username}')
     #print(f'Password: {password}')
@@ -44,16 +50,12 @@ def registerComplete():
     elif len(email) >120:
         flash('Please enter valid email.', 'error')
     else:
-        username
-        session['js_username'] = username
-            
-        new_user = User(email=email, username=username, password=password)
+        hashed_password = generate_password_hash(password)
+        new_user = User(email=email, username=username, password=hashed_password)
         db.session.add(new_user)
         db.session.commit()
         flash('Registration successful!', 'success')
-        return redirect(url_for('play'))
         
 
-@flaskApp.route('/login')
-def login():
-    
+#@flaskApp.route('/login')
+#def login():
