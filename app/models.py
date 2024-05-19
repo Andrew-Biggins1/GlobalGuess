@@ -10,6 +10,11 @@ class User(db.Model):
 
     def __repr__(self):
         return f'<User {self.username}>'
+    def set_password(self, password):
+        self.password_hash = generate_password_hash(password)
+
+    def check_password(self, password):
+        return check_password_hash(self.password_hash, password)
     
 #Model for guess made (Used to display in profile)
 class Guess(db.Model):
@@ -22,9 +27,10 @@ class Guess(db.Model):
     def __repr__(self):
         return f'<Was your guess correct? {self.Guess == self.correctGuess}>'
     
-    def set_password(self, password):
-        self.password_hash = generate_password_hash(password)
-
-    def check_password(self, password):
-        return check_password_hash(self.password_hash, password)
     
+
+#Model for images uploaded
+class Upload(db.Model):
+    uploadID = db.Column(db.String(), primary_key = True)
+    User = db.Column(db.String(), db.ForeignKey('User.username'))
+    location = db.Column(db.String(25), nullable=False)
