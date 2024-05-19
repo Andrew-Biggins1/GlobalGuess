@@ -119,6 +119,8 @@ body {
     font-weight: bold;
     font-size: 12px;
     border-radius: 5px;
+    color: black;
+    margin: 0 auto;
 
 
   }
@@ -401,3 +403,4 @@ body {
     border-radius: 4px;
     margin-right: 10px;
 }
+
