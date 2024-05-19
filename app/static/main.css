@@ -119,8 +119,7 @@ body {
     font-weight: bold;
     font-size: 12px;
     border-radius: 5px;
-    color: black;
-    margin: 0 auto;
+
 
 
   }
@@ -174,7 +173,7 @@ body {
 }
 
 #dashboard-content {
-    padding-top: 200px;
+    padding-top: 50px;
     text-align: center;
     font-size: 18px;
 }
@@ -404,3 +403,26 @@ body {
     margin-right: 10px;
 }
 
+
+.login-submit{
+    color: black;
+    margin: 0 auto;
+    cursor: pointer;
+    height: 30px;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    box-shadow:  0 0 10px rgb(41, 94, 116);
+    background-color: white;
+    border: 1.5px solid rgb(41, 94, 116);
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 5px;
+
+}
+
+.login-submit:hover{
+    background-color: #bfdcdc;
+}
