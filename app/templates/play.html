@@ -14,7 +14,7 @@
 <body onload="loadPlay()">
 <div id="userDisplay" class = "navbar">
     <p id="userNameDisplay" style="color: #e0f2f1; padding-left: 25px;" ></p>
-    <button onclick="location.href='{{ url_for('homepage') }}'" class="login-signup-button" style="width:75px; text-align: left;">Home</button>
+    <button onclick="location.href='{{ url_for('homepage') }}'" style="width:75px; align-self: flex-end;">Home</button>
 </div>
 <h1 id="header">PLAY</h1>
 <p id="imageNameDisplay" style="margin: 0px; text-align: center;"></p>
@@ -22,7 +22,7 @@
 
 <div class="container">
     <input type="text" id="guessInput" style = "width:160px" placeholder="Enter your guess">
-    <button onclick="checkGuess()" class="login-signup-button" style="width:30px">✔</button>
+    <button onclick="checkGuess()" style="width:30px">✔</button>
 </div>
 <div class="container" style="padding-top: 10px;">
     <button onclick="reloadPage()" class="login-signup-button">Next Image</button>
