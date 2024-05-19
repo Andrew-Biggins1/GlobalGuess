@@ -1,0 +1,459 @@
+*{
+    font-family: gill sans ;
+}
+
+
+body {
+    background-color: #e0f2f1; 
+}
+
+.table1{
+    padding: 10px;
+
+}
+
+
+#description{
+    padding: 10px;
+}
+
+.about-button {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-end;
+    position: fixed; 
+    bottom: 10px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+
+}
+
+.about-button button {
+    cursor: pointer;
+    height: 30px;
+    width: 300px;
+    box-shadow: 0 0 10px rgb(41, 94, 116);
+    background-color: white;
+    border: 1.5px solid rgb(41, 94, 116);
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+.square {
+    width: 300px; 
+    height: 100px; 
+    background-color: #bfdcdc; 
+    position: absolute; 
+    bottom: 120px; 
+    left: 10%; 
+    z-index: -1;
+}
+
+.square2 {
+    width: 150px; 
+    height: 200px; 
+    background-color: #bfdcdc; 
+    position: absolute; 
+    bottom: 100px; 
+    right: 5%; 
+    z-index: -1;
+}
+
+.square3 {
+    width: 150px; 
+    height: 300px; 
+    background-color: #bfdcdc; 
+    position: absolute; 
+    bottom: 500px; 
+    left: 10%; 
+    z-index: -1;
+}
+
+.square4 {
+    width: 300px; 
+    height: 100px; 
+    background-color: #bfdcdc; 
+    position: absolute; 
+    bottom: 650px; 
+    left: 70%; 
+    z-index: -1;
+}
+
+
+#homeText{
+    text-align: center;
+    padding-top: 30px;
+}
+
+#header{
+    margin: 1px 0; 
+    font-size: 60px;
+    width: 50%; 
+    margin: 0 auto; 
+    text-align: center; 
+    font-weight: bold;
+    
+}
+
+.login h1 {
+    margin: 1px 0; 
+    font-size: 60px;
+    width: 50%; 
+    margin: 0 auto; 
+    text-align: center; 
+}
+
+
+.login-signup-button {
+    cursor: pointer;
+    height: 30px;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    box-shadow:  0 0 10px rgb(41, 94, 116);
+    background-color: white;
+    border: 1.5px solid rgb(41, 94, 116);
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 5px;
+
+
+
+  }
+
+
+.login-signup-button:hover{
+    background-color: #bfdcdc;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.login {
+    text-align: center;
+}
+
+.login button {
+    margin: 10px;
+    width: 100px;
+    height: 30px;
+}
+
+.login button:hover{
+    background-color: #bfdcdc;
+}
+
+.about-button button:hover{
+    background-color: #bfdcdc;
+}
+
+
+
+.username-group{
+    padding: 20px;
+}
+
+#task-bar {
+    background-color: #f0f0f0;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 100%;
+    display: none;
+    text-align: left;
+}
+
+#dashboard-content {
+    padding-top: 50px;
+    text-align: center;
+    font-size: 18px;
+}
+
+#welcomeMessage {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+#hamburger {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    font-size: 36px;
+}
+
+.task-bar-item {
+    margin-bottom: 20px;
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.task-bar-item:hover {
+    background-color: #cccccc;
+}
+
+.task-bar-item h3 {
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+    color: black;
+}
+
+.task-bar-item:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.friend {
+    border: 1px solid rgb(41, 94, 116);
+    padding: 10px;
+    margin: 5px auto;
+    width: 200px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.game-buttons {
+    margin-top: 20px;
+}
+
+.game-buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #e7eeee;
+    border: 1.5px solid rgb(58, 116, 41);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.game-buttons button:hover {
+    background-color: #bfdcdc;
+}
+
+#file-input-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2196F3;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#file-input-container input[type="file"] {
+    margin: 10px 0;
+    display: block;
+}
+
+.play-image-container{
+    text-align: center;
+    margin: 0;
+    border: 2px black;
+    border-radius: 2px 2px 2px 2px;
+}
+
+.locationImage{
+    width:400px; 
+    height:300px; 
+    border: 4px solid black; 
+    border-radius: 2px;
+}
+
+.inputFile{
+    width: 70px;
+    color: beige;
+    text-align: center;
+    padding: 0;
+}
+
+.navbar{
+    background-color: #2196F3;
+    overflow: hidden;
+    width: 100%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-right: 25px;
+    display: flex;
+}
+
+.navbar button{
+    cursor: pointer;
+    height: 30px;
+    width: 200px;
+    box-shadow:  0 0 10px rgb(41, 94, 116);
+    background-color: white;
+    border: 1.5px solid rgb(41, 94, 116);
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 5px;
+    color: black;
+    margin-left:auto;
+}
+
+
+.navbar p{
+    display: block;
+    color: white;
+    font-size: 16px;
+}
+
+
+.map{
+    width: 500px;
+    height: 300px;
+    z-index: -1;
+    position: absolute;
+    background-color: #2196F3;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 100px;
+
+}
+
+.ice1 {
+    width: 290px;
+    height: 25px;
+    background-color: white;
+    position: absolute;
+    bottom: 0; 
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px 10px 0 0 ;
+}
+
+.ice2 {
+    width: 180px;
+    height: 35px;
+    background-color: white;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0 0 5px 5px ;
+}
+
+.land1 {
+    width: 25px;
+    height: 45px;
+    background-color: lightgreen;
+    position: absolute;
+    top: 150px;
+    left: 15%;
+    transform: translateX(-50%);
+    border-radius: 10px 5px 5px 5px ;
+}
+.land2 {
+    width: 60px;
+    height: 65px;
+    background-color: lightgreen;
+    position: absolute;
+    top: 90px;
+    left: 20%;
+    transform: translateX(-50%);
+    border-radius: 5px 0 5px 5px ;
+}
+.land3 {
+    width: 130px;
+    height: 35px;
+    background-color: lightgreen;
+    position: absolute;
+    top: 170px;
+    left: 55%;
+    transform: translateX(-50%);
+    border-radius: 5px 5px 5px 5px ;
+}
+.land4 {
+    width: 70px;
+    height: 60px;
+    background-color: lightgreen;
+    position: absolute;
+    top: 130px;
+    left: 49%;
+    transform: translateX(-50%);
+    border-radius: 50px 30px 5px 5px ;
+}
+
+.land5 {
+    width: 70px;
+    height: 60px;
+    background-color: lightgreen;
+    position: absolute;
+    top: 90px;
+    left: 85%;
+    transform: translateX(-50%);
+    border-radius: 90px 10px 5px 42px ;
+}
+
+.container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+.container button{
+    cursor: pointer;
+    height: 30px;
+    width: 200px;
+    box-shadow:  0 0 10px rgb(41, 94, 116);
+    background-color: white;
+    border: 1.5px solid rgb(41, 94, 116);
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 5px;
+    color: black;
+    margin: 0px;
+}
+
+#guessInput {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+
+.login-submit{
+    color: black;
+    margin: 0 auto;
+    cursor: pointer;
+    height: 30px;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    box-shadow:  0 0 10px rgb(41, 94, 116);
+    background-color: white;
+    border: 1.5px solid rgb(41, 94, 116);
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 5px;
+
+}
+
+.login-submit:hover{
+    background-color: #bfdcdc;
+}
+.description{
+    padding: 10px;
+}
