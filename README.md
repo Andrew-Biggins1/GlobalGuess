@@ -1,9 +1,9 @@
 # GlobalGuess
 
 ## PLEASE NOTE
-To load css, /static/main.css didn't want to work at all but /app/static/main.css didn't work in flask
+To load css, /static/main.css didn't want to work at all but /app/static/main.css didn't work in flask.
 so  ```<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">``` was used but wont pass html validation. 
-Please insert into html documents or css will not load, another copy of this has been made called GlobalGuess1 which has the full code but wont pass validation.
+The main app will run fine but wont pass html validation because of the above. Another copy that will pass html validation has been put in named ```GlobalGuess1```, but the css will not load in flask. CSS will load into previews. Sorry for the inconvinince.
 
 
 ## Description:
@@ -37,5 +37,8 @@ Backend (Flask app in python):
 4. build database using ```flask db init```
 5. run flask application using ```flask run```
 
+# Testing
+In the app directory there is a small test file which will allow you to populate the database to test its set up correctly
+```/app/test.py```
 
 
