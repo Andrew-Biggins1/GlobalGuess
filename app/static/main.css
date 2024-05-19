@@ -293,6 +293,21 @@ body {
     padding-bottom: 10px;
     padding-top: 10px;
     padding-right: 25px;
+    display: flex;
+}
+
+.navbar button{
+    cursor: pointer;
+    height: 30px;
+    width: 200px;
+    box-shadow:  0 0 10px rgb(41, 94, 116);
+    background-color: white;
+    border: 1.5px solid rgb(41, 94, 116);
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 5px;
+    color: black;
+    margin-left:auto;
 }
 
 
@@ -394,6 +409,19 @@ body {
     display: flex;
     justify-content: center; 
     align-items: center;
+}
+.container button{
+    cursor: pointer;
+    height: 30px;
+    width: 200px;
+    box-shadow:  0 0 10px rgb(41, 94, 116);
+    background-color: white;
+    border: 1.5px solid rgb(41, 94, 116);
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 5px;
+    color: black;
+    margin: 0px;
 }
 
 #guessInput {
