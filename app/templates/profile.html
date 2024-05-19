@@ -3,17 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="/app/static/main.css" >
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <script src="/app/static/main.js"></script>
     <title>🌎 Dashboard</title>
 </head>
 <body>
     <div id="hamburger" aria-label="Menu">&#9776;</div>
 
     <div class="welcome">
-        <h1 id="header">GlobalGuess 🌎</h1>
+        <h1 id="header">Dashboard 🌎</h1>
+        
     </div>
 
+    <div id="dashboard-content">
+        <div>
+            <h2 id="welcomeMessage">Welcome, <span id="username">{{ username }}</span></h2>
+            <div class="game-buttons">
+                <button onclick="startGame()">Start Game</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="square"></div>  
+    <div class="square2"></div>
+    <div class="square3"></div>
+    <div class="square4"></div>
+
+    <div class="map">
+        <div class="ice1"></div>
+        <div class="ice2"></div>
+
+        <div class="land1"></div>
+        <div class="land2"></div>
+        <div class="land3"></div>
+        <div class="land4"></div>
+        <div class="land5"></div>
+    </div>
     <div id="task-bar" class="hidden">
         <div class="task-bar-item" 
              onmouseover="handleMouseOver(this)" 
@@ -27,14 +53,14 @@
              onclick="displayPlayerStats()">
             <h3>Stats</h3>
         </div>
-        <!-- Replace leaderboard with about us -->
+
         <div class="task-bar-item" 
              onmouseover="handleMouseOver(this)" 
              onmouseout="handleMouseOut(this)" 
              onclick="redirectToAboutPage()">
             <h3>About Us</h3>
         </div>
-        <!-- End of replacement -->
+
         <div class="task-bar-item" 
              onmouseover="handleMouseOver(this)" 
              onmouseout="handleMouseOut(this)" 
@@ -48,14 +74,7 @@
     <div class="square3"></div>
     <div class="square4"></div>
 
-    <div id="dashboard-content">
-        <div>
-            <h2 id="welcomeMessage">Welcome, <span id="username"></span></h2>
-            <div class="game-buttons">
-                <button onclick="startGame()">Start Game</button>
-            </div>
-        </div>
-    </div>
+    
 
     <div id="file-input-container" style="display:none;">
         <input type="file" id="imageInput" accept="image/*">
