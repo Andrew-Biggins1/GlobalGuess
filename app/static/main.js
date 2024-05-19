@@ -103,6 +103,18 @@ function showFileInput() {
         const fileInputContainer = document.getElementById('file-input-container');
         fileInputContainer.style.display = 'block';
 }
+function redirectToAboutPage() {
+    window.location.href = 'about.html';
+}
+function handleMouseOver(element) {
+    element.style.backgroundColor = '#bfdcdc';
+    element.style.color = 'white';
+}
+
+function handleMouseOut(element) {
+    element.style.backgroundColor = '';
+    element.style.color = 'black';
+}
 
 //JAVASCRIPT FOR PLAY PAGE
 
